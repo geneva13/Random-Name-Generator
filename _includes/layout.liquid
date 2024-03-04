@@ -8,16 +8,15 @@ title: 11ty Boilerplate
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YAP</title>
-  <script src="utilities.js"></script>
-  <script src="//unpkg.com/alpinejs" defer></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link rel="stylesheet" href="/styles/screen.css">
-
+  <script src="randomnamegenerator.js"></script>
 </head>
 <body>
-  <div x=data="{name: ['g', 'jac', 'obs']}">
-    <button @click="alert(name[0])">Alpine</button>
-
-  </div>
-
+<div x-data="{ randomName: '' }">
+        <h1>Random Name Generator</h1>
+        <button @click="randomName = generateRandomName()">Generate Name</button>
+        <p x-text="randomName"></p>
+    </div>
 </body>
 </html>
