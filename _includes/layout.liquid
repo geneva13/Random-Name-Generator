@@ -9,14 +9,24 @@ title: 11ty Boilerplate
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YAP</title>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <link rel="stylesheet" href="/styles/screen.css">
   <script src="randomnamegenerator.js"></script>
+  <link rel="stylesheet" href="/styles/screen.css">
 </head>
 <body>
-<div x-data="{ randomName: '' }">
-        <h1>Random Name Generator</h1>
-        <button @click="randomName = generateRandomName()">Generate Name</button>
-        <p x-text="randomName"></p>
-    </div>
+<div x-data="rando">
+        <h1 x-text="name"></h1>
+        <button @click="name = name">Generate a name</button>
+ </div>
+<script>
+function rando() {
+    const names = ['Olivia', 'Noah', 'Emma', 'Liam', 'Amelia', 'Oliver', 'Sophia', 'Elijah', 'Charlotte', 'Mateo'];
+    return {
+      get name() {
+        return names[Math.floor(Math.random() * names.length)];
+      },
+    }
+  }
+</script>
+
 </body>
 </html>
