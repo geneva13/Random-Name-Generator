@@ -13,14 +13,15 @@ title: 11ty Boilerplate
   <link rel="stylesheet" href="/styles/screen.css">
 </head>
 <body>
-<h2>Random Name Generator</h2>
+<h2>Activity Generator</h2>
+<p>Happy Valentines day!!!! </p>
 <div x-data="rando">
         <h1 x-text="name"></h1>
-        <button @click="name = name">Generate a name</button>
+        <button @click="name = name">Generate an Activity</button>
  </div>
 <script>
 function rando() {
-    const names = ['Claire', 'John', 'Katie', 'Liam', 'Amelia', 'Oliver', 'Sophia', 'Elijah', 'Charlotte', 'Mateo'];
+    const names = ['Go to the mall ', 'Vape-off', 'Make clay', 'Go thrift', 'Cook nice meal', 'Feed ducks', 'Buy puzzle/game', 'Minecraft', 'Critique movie', 'Think a lot at an art museum', 'Play catch', 'Make tier lists', ];
     return {
       get name() {
         return names[Math.floor(Math.random() * names.length)];
@@ -30,4 +31,6 @@ function rando() {
 </script>
 
 </body>
+
+<img alt="pine" src="/images/skyblock.png" width="600" />
 </html>
