@@ -15,13 +15,14 @@ title: 11ty Boilerplate
 <body>
 <h2>Activity Generator</h2>
 <p>Happy Valentines day!!!! </p>
+
 <div x-data="rando">
         <h1 x-text="name"></h1>
         <button @click="name = name">Generate an Activity</button>
  </div>
 <script>
 function rando() {
-    const names = ['Go to the mall ', 'Vape-off', 'Make clay', 'Go thrift', 'Cook nice meal', 'Feed ducks', 'Buy puzzle/game', 'Minecraft', 'Critique movie', 'Think a lot at an art museum', 'Play catch', 'Make tier lists', ];
+    const names = ['Go to the mall ', 'Vape-off', 'Make clay', 'Go thrift', 'Cook nice meal', 'Feed ducks', 'Buy puzzle/game', 'Minecraft', 'Critique movie', 'Think a lot at an art museum', 'Play catch', 'Make tier lists', 'Online Catan', 'Play HORSE', 'Make Vision Board'];
     return {
       get name() {
         return names[Math.floor(Math.random() * names.length)];
@@ -29,8 +30,7 @@ function rando() {
     }
   }
 </script>
-
+<img alt="pine" src="/images/Subject.png" width="150" />
 </body>
 
-<img alt="pine" src="/images/skyblock.png" width="600" />
 </html>
